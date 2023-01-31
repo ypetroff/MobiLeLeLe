@@ -1,4 +1,4 @@
-package bg.softuni.mobilelele.models.enums;
+package bg.softuni.mobilelele.model.enums;
 
 public enum Engine {
     ASOLINE,

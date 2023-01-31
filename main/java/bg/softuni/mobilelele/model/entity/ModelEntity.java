@@ -1,6 +1,6 @@
-package bg.softuni.mobilelele.models.entities;
+package bg.softuni.mobilelele.model.entity;
 
-import bg.softuni.mobilelele.models.enums.ModelCategory;
+import bg.softuni.mobilelele.model.enums.ModelCategory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
