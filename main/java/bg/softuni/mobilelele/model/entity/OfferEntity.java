@@ -1,7 +1,7 @@
 package bg.softuni.mobilelele.model.entity;
 
 import bg.softuni.mobilelele.model.enums.Engine;
-import bg.softuni.mobilelele.model.enums.Trasmission;
+import bg.softuni.mobilelele.model.enums.Transmission;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -29,7 +29,7 @@ public class OfferEntity extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     @Column
-    private Trasmission trasmission;
+    private Transmission transmission;
     //year of offered car
     @Column
     private Integer year;

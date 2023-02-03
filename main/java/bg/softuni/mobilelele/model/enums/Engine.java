@@ -1,7 +1,7 @@
 package bg.softuni.mobilelele.model.enums;
 
 public enum Engine {
-    ASOLINE,
+    GASOLINE,
     DIESEL,
     ELECTRIC,
     HYBRID

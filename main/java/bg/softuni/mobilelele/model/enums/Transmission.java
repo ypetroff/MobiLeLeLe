@@ -1,6 +1,6 @@
 package bg.softuni.mobilelele.model.enums;
 
-public enum Trasmission {
+public enum Transmission {
     MANUAL,
     AUTOMATIC
 }
