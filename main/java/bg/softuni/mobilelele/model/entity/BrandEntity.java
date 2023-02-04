@@ -19,12 +19,12 @@ import java.time.LocalDateTime;
 @Table(name = "brands")
 public class BrandEntity extends BaseEntity {
 
-    @Column
+    @Column(nullable = false)
     private String name;
 
-    @Column
+    @Column(nullable = false)
     private LocalDateTime created;
 
-    @Column
+    @Column(nullable = false)
     private LocalDateTime modified;
 }
