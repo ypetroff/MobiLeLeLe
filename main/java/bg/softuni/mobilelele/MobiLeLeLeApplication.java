@@ -1,5 +1,6 @@
 package bg.softuni.mobilelele;
 
+import bg.softuni.mobilelele.service.SeedService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
