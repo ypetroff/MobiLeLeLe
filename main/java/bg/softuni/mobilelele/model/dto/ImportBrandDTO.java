@@ -19,11 +19,4 @@ public class ImportBrandDTO {
     @Size(min = 5)
     private String name;
 
-//    @Expose
-//    @NotEmpty
-//    private String created;
-//
-//    @Expose
-//    @NotEmpty
-//    private String modified;
 }

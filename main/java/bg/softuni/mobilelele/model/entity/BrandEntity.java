@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 @Table(name = "brands")
 public class BrandEntity extends BaseEntity {
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String name;
 
     @Column(nullable = false)

@@ -1,34 +1,35 @@
 package bg.softuni.mobilelele.configuration;
 
-import bg.softuni.mobilelele.repository.*;
-import bg.softuni.mobilelele.service.SeedService;
+import bg.softuni.mobilelele.service.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DataInitializer implements CommandLineRunner {
 
-    private final BrandRepository brandRepository;
-    private final ModelRepository modelRepository;
-    private final OfferRepository offerRepository;
-    private final UserRepository userRepository;
-    private final UserRoleRepository userRoleRepository;
-    private final SeedService seedService;
+    private final UserRoleService userRoleService;
+    private final UserService userService;
+    private final BrandService brandService;
+    private final ModelService modelService;
+    private final OfferService offerService;
 
-    public DataInitializer(BrandRepository brandRepository, ModelRepository modelRepository,
-                           OfferRepository offerRepository, UserRepository userRepository,
-                           UserRoleRepository userRoleRepository, SeedService seedService) {
-        this.brandRepository = brandRepository;
-        this.modelRepository = modelRepository;
-        this.offerRepository = offerRepository;
-        this.userRepository = userRepository;
-        this.userRoleRepository = userRoleRepository;
-        this.seedService = seedService;
+    public DataInitializer(UserRoleService userRoleService,
+                           UserService userService, BrandService brandService,
+                           ModelService modelService, OfferService offerService) {
+        this.userRoleService = userRoleService;
+        this.userService = userService;
+        this.brandService = brandService;
+        this.modelService = modelService;
+        this.offerService = offerService;
     }
 
     @Override
     public void run(String... args) throws Exception {
 
-        this.seedService.importAll();
+        this.userRoleService.importInitialDataForEmptyUserRoleRepository();
+        this.userService.importInitialDataForEmptyUserRepository();
+        this.brandService.importInitialDataForEmptyBrandRepository();
+        this.modelService.importInitialDataForEmptyModelRepository();
+        this.offerService.importInitialDataForEmptyOfferRepository();
     }
 }

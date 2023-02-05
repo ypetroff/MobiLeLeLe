@@ -6,6 +6,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -33,5 +36,10 @@ public class ApplicationBeanConfiguration {
 //                .serializeNulls() //NOTE: serialize null values if necessary
                 .excludeFieldsWithoutExposeAnnotation()
                 .create();
+    }
+
+
+    public String readDataFromFile(Path path) throws IOException {
+        return Files.readString(path);
     }
 }

@@ -3,10 +3,18 @@ package bg.softuni.mobilelele.model.entity;
 import bg.softuni.mobilelele.model.enums.Engine;
 import bg.softuni.mobilelele.model.enums.Transmission;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "offers")
 public class OfferEntity extends BaseEntity {
